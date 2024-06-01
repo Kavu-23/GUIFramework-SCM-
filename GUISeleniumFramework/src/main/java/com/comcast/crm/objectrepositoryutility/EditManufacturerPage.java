@@ -6,6 +6,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.comcast.crm.generic.basetest.BaseClass;
+import com.comcast.crm.generic.fileutility.ExcelUtility;
+
 public class EditManufacturerPage {
 
 	 WebDriver driver;
@@ -14,6 +17,9 @@ public class EditManufacturerPage {
      PageFactory.initElements(driver, this);
      }
      
+    @FindBy(linkText= "Edit Profile")
+    private WebElement editProfileBtn;
+    
 	@FindBy(id = "manufacturer:name")
 
 	private WebElement Editname;
@@ -102,5 +108,24 @@ public class EditManufacturerPage {
 
 		return changepass2;
 
+	}
+
+	public WebElement getEditProfileBtn() {
+		return editProfileBtn;
+	}
+	
+	//Business logic
+	public void editManufacturerPassword() throws Throwable {
+		editProfileBtn.click();
+		changepass.click();
+		ExcelUtility eLib = new ExcelUtility();
+		String oldPas = eLib.getDataFromExcel("Sheet1", 4, 1);
+		String newPas = eLib.getDataFromExcel("Sheet1", 4, 2);
+		String confirmPas = eLib.getDataFromExcel("Sheet1", 4, 3);
+		oldpass.sendKeys(oldPas);
+		newpass.sendKeys(newPas);
+		confpass.sendKeys(confirmPas);
+		changepass2.click();
+		
 	}
 }

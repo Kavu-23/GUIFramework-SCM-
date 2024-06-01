@@ -15,6 +15,7 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Parameters;
 
 import com.comcast.crm.generic.databaseutlity.DataBaseUtility;
 import com.comcast.crm.generic.fileutility.ExcelUtility;
@@ -22,8 +23,6 @@ import com.comcast.crm.generic.fileutility.FileUtility;
 import com.comcast.crm.generic.webdriverutility.JavaUtility;
 import com.comcast.crm.generic.webdriverutility.UtilityClassObject;
 import com.comcast.crm.generic.webdriverutility.WebDriverUtility;
-import com.comcast.crm.objectrepositoryutility.Home;
-import com.comcast.crm.objectrepositoryutility.LoginPage;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -46,7 +45,7 @@ public class BaseClass {
 		}
 		
 		
-       //  @Parameters ("BROWSER")
+        // @Parameters ("Browser")
 	    @BeforeClass(groups = {"smokeTest", "regressionTest"})
 	    public void configBC() throws Throwable {
 	    	
@@ -54,18 +53,18 @@ public class BaseClass {
 	    
 		
 		
-	    
-	   // String BROWSER	= fLib.getDataFromPropertiesFile("browser");
-	    String BROWSER = System.getProperty("browser" , fLib.getDataFromPropertiesFile("browser"));
-		if(BROWSER.equals("chrome")) {
+	   // String Browser=browser;
+	   String Browser	= fLib.getDataFromPropertiesFile("browser");
+	   // String BROWSER = System.getProperty("browser" , fLib.getDataFromPropertiesFile("browser"));
+		if(Browser.equals("chrome")) {
 			WebDriverManager.chromedriver().setup();
 			ChromeOptions chromeOptions = new ChromeOptions();
 			driver = new ChromeDriver(chromeOptions);
-		}else if(BROWSER.equals("firefox")) {
+		}else if(Browser.equals("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
 			FirefoxOptions firefoxOption = new FirefoxOptions();
 			driver = new FirefoxDriver(firefoxOption);
-		}else if(BROWSER.equals("edge")) {
+		}else if(Browser.equals("edge")) {
 			WebDriverManager.edgedriver().setup();
 			EdgeOptions edgeOption = new EdgeOptions();
 			driver = new EdgeDriver(edgeOption);
@@ -81,6 +80,7 @@ public class BaseClass {
 	    @BeforeMethod(groups = {"smokeTest", "regressionTest"})
 		public void configBM() throws Throwable {
 			System.out.println("=login=");
+			
 //			String URL = System.getProperty("url" ,fLib.getDataFromPropertiesFile("url") );
 //			String USERNAME = System.getProperty("username" , fLib.getDataFromPropertiesFile("username"));
 //			String PASSWORD = System.getProperty("password" , fLib.getDataFromPropertiesFile("password"));
@@ -92,8 +92,7 @@ public class BaseClass {
 		@AfterMethod(groups = {"smokeTest", "regressionTest"})
 		public void configAM() {
 			System.out.println("=logout=");
-			Home hp = new Home(driver);
-			hp.logout();
+			
 		}
 		
 	    
@@ -109,10 +108,6 @@ public class BaseClass {
 			dbLib.closeDbconnection();
 			
 		}
-	  
 	
-	   
-	    
-
 
 }

@@ -7,7 +7,6 @@ import java.util.Date;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.testng.ISuite;
 import org.testng.ISuiteListener;
 import org.testng.ITestContext;
@@ -67,7 +66,7 @@ public class ListImpClass implements ITestListener , ISuiteListener{
 
 	public void onTestFailure(ITestResult result) {
 		String testNAme = result.getMethod().getMethodName();		
-		TakesScreenshot eDriver = (TakesScreenshot) BaseClass.sdriver;
+		TakesScreenshot eDriver = (TakesScreenshot)UtilityClassObject.getDriver();
 		String filePath = eDriver.getScreenshotAs(OutputType.BASE64);
 		
 	    String time = 	new Date().toString().replace(" ", "_").replace(":", "_");

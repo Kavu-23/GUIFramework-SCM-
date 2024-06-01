@@ -4,6 +4,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+import com.comcast.crm.generic.basetest.BaseClass;
+import com.comcast.crm.generic.fileutility.ExcelUtility;
+import com.comcast.crm.generic.webdriverutility.WebDriverUtility;
 /*
  * @auother:Preethi
  *
@@ -63,6 +67,19 @@ private WebElement retaileraddbutton;
 public WebElement getretaileraddbutton()
 {
 return retaileraddbutton;
+}
+
+//Business logic
+public void addDetailsOfRetailer() throws Throwable {
+	ExcelUtility eLib = new ExcelUtility();
+	WebDriverUtility wLib = new WebDriverUtility();
+	retailername.sendKeys(eLib.getDataFromExcel("Sheet1", 7, 1));
+	retailerpwd.sendKeys(eLib.getDataFromExcel("Sheet1", 7, 2));
+	wLib.select(retailerareaCodeDD, eLib.getDataFromExcel("Sheet1", 7, 3));
+	retailerphone.sendKeys(eLib.getDataFromExcel("Sheet1", 7, 4));
+	retaileremail.sendKeys(eLib.getDataFromExcel("Sheet1", 7, 5));
+	retaileraddress.sendKeys(eLib.getDataFromExcel("Sheet1", 7, 6));
+	retaileraddbutton.click();
 }
 
 }

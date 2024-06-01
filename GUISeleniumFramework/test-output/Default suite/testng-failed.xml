@@ -3,17 +3,21 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.comcast.crm.contacttest.SampleTest">
+      <class name="com.finsBury.SCM.System.supplySyncAllTest">
         <methods>
+          <include name="manufacturerTest"/>
+          <include name="addProductTest"/>
+          <include name="retailerTest"/>
           <include name="configBM"/>
           <include name="configAM"/>
           <include name="configBS"/>
           <include name="configBC"/>
-          <include name="createConTactTest"/>
+          <include name="addAndDeleteUnit"/>
+          <include name="addCategoryAndEditCategoryTest"/>
           <include name="configAS"/>
           <include name="configAC"/>
         </methods>
-      </class> <!-- com.comcast.crm.contacttest.SampleTest -->
+      </class> <!-- com.finsBury.SCM.System.supplySyncAllTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,44 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-29T09:15:00Z" name="Default suite" finished-at="2024-05-29T09:15:18Z" duration-ms="17678">
+  <suite started-at="2024-06-01T04:25:42Z" name="Suite" finished-at="2024-06-01T04:26:07Z" duration-ms="25061">
     <groups>
-      <group name="smokeTest">
-        <method signature="SampleTest.createConTactTest()[pri:0, instance:com.comcast.crm.contacttest.SampleTest@61544ae6]" name="createConTactTest" class="com.comcast.crm.contacttest.SampleTest"/>
-      </group> <!-- smokeTest -->
     </groups>
-    <test started-at="2024-05-29T09:15:00Z" name="Default test" finished-at="2024-05-29T09:15:18Z" duration-ms="17678">
-      <class name="com.comcast.crm.contacttest.SampleTest">
-        <test-method is-config="true" signature="configBS()[pri:0, instance:com.comcast.crm.contacttest.SampleTest@61544ae6]" started-at="2024-05-29T09:15:00Z" name="configBS" finished-at="2024-05-29T09:15:00Z" duration-ms="87" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- configBS -->
-        <test-method is-config="true" signature="configBC()[pri:0, instance:com.comcast.crm.contacttest.SampleTest@61544ae6]" started-at="2024-05-29T09:15:00Z" name="configBC" finished-at="2024-05-29T09:15:12Z" duration-ms="11477" status="PASS">
+    <test started-at="2024-06-01T04:25:42Z" name="TestRunner-Chrome" finished-at="2024-06-01T04:25:57Z" duration-ms="14653">
+      <class name="com.finsBury.SCM.System.AddAndDeleteUnitTest">
+        <test-method is-config="true" signature="configBC(java.lang.String)[pri:0, instance:com.finsBury.SCM.System.AddAndDeleteUnitTest@4a22f9e2]" started-at="2024-06-01T04:25:42Z" name="configBC" finished-at="2024-06-01T04:25:46Z" duration-ms="3526" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBC -->
-        <test-method is-config="true" signature="configBM()[pri:0, instance:com.comcast.crm.contacttest.SampleTest@61544ae6]" started-at="2024-05-29T09:15:12Z" name="configBM" finished-at="2024-05-29T09:15:15Z" duration-ms="2831" status="PASS">
+        <test-method is-config="true" signature="configBM()[pri:0, instance:com.finsBury.SCM.System.AddAndDeleteUnitTest@4a22f9e2]" started-at="2024-06-01T04:25:46Z" name="configBM" finished-at="2024-06-01T04:25:46Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBM -->
-        <test-method signature="createConTactTest()[pri:0, instance:com.comcast.crm.contacttest.SampleTest@61544ae6]" started-at="2024-05-29T09:15:15Z" name="createConTactTest" finished-at="2024-05-29T09:15:15Z" duration-ms="21" status="PASS">
+        <test-method signature="addAndDeleteUnit()[pri:0, instance:com.finsBury.SCM.System.AddAndDeleteUnitTest@4a22f9e2]" started-at="2024-06-01T04:25:46Z" name="addAndDeleteUnit" finished-at="2024-06-01T04:25:55Z" duration-ms="9429" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createConTactTest -->
-        <test-method is-config="true" signature="configAM()[pri:0, instance:com.comcast.crm.contacttest.SampleTest@61544ae6]" started-at="2024-05-29T09:15:15Z" name="configAM" finished-at="2024-05-29T09:15:15Z" duration-ms="337" status="PASS">
+        </test-method> <!-- addAndDeleteUnit -->
+        <test-method is-config="true" signature="configAM()[pri:0, instance:com.finsBury.SCM.System.AddAndDeleteUnitTest@4a22f9e2]" started-at="2024-06-01T04:25:55Z" name="configAM" finished-at="2024-06-01T04:25:55Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAM -->
-        <test-method is-config="true" signature="configAC()[pri:0, instance:com.comcast.crm.contacttest.SampleTest@61544ae6]" started-at="2024-05-29T09:15:15Z" name="configAC" finished-at="2024-05-29T09:15:18Z" duration-ms="2959" status="PASS">
+        <test-method is-config="true" signature="configAC()[pri:0, instance:com.finsBury.SCM.System.AddAndDeleteUnitTest@4a22f9e2]" started-at="2024-06-01T04:25:55Z" name="configAC" finished-at="2024-06-01T04:25:57Z" duration-ms="1649" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAC -->
-        <test-method is-config="true" signature="configAS()[pri:0, instance:com.comcast.crm.contacttest.SampleTest@61544ae6]" started-at="2024-05-29T09:15:18Z" name="configAS" finished-at="2024-05-29T09:15:18Z" duration-ms="1" status="PASS">
+      </class> <!-- com.finsBury.SCM.System.AddAndDeleteUnitTest -->
+    </test> <!-- TestRunner-Chrome -->
+    <test started-at="2024-06-01T04:25:42Z" name="TestRunner-Edge" finished-at="2024-06-01T04:26:07Z" duration-ms="25049">
+      <class name="com.finsBury.SCM.System.System_ManufacturerTest">
+        <test-method is-config="true" signature="configBS()[pri:0, instance:com.finsBury.SCM.System.System_ManufacturerTest@3f197a46]" started-at="2024-06-01T04:25:42Z" name="configBS" finished-at="2024-06-01T04:25:42Z" duration-ms="84" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBS -->
+        <test-method is-config="true" signature="configBC(java.lang.String)[pri:0, instance:com.finsBury.SCM.System.System_ManufacturerTest@3f197a46]" started-at="2024-06-01T04:25:42Z" name="configBC" finished-at="2024-06-01T04:25:56Z" duration-ms="13388" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBC -->
+        <test-method is-config="true" signature="configBM()[pri:0, instance:com.finsBury.SCM.System.System_ManufacturerTest@3f197a46]" started-at="2024-06-01T04:25:56Z" name="configBM" finished-at="2024-06-01T04:25:56Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBM -->
+        <test-method signature="manufacturerTest()[pri:0, instance:com.finsBury.SCM.System.System_ManufacturerTest@3f197a46]" started-at="2024-06-01T04:25:56Z" name="manufacturerTest" finished-at="2024-06-01T04:26:06Z" duration-ms="9972" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- manufacturerTest -->
+        <test-method is-config="true" signature="configAM()[pri:0, instance:com.finsBury.SCM.System.System_ManufacturerTest@3f197a46]" started-at="2024-06-01T04:26:06Z" name="configAM" finished-at="2024-06-01T04:26:06Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAM -->
+        <test-method is-config="true" signature="configAC()[pri:0, instance:com.finsBury.SCM.System.System_ManufacturerTest@3f197a46]" started-at="2024-06-01T04:26:06Z" name="configAC" finished-at="2024-06-01T04:26:07Z" duration-ms="1619" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAC -->
+        <test-method is-config="true" signature="configAS()[pri:0, instance:com.finsBury.SCM.System.System_ManufacturerTest@3f197a46]" started-at="2024-06-01T04:26:07Z" name="configAS" finished-at="2024-06-01T04:26:07Z" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAS -->
-      </class> <!-- com.comcast.crm.contacttest.SampleTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- com.finsBury.SCM.System.System_ManufacturerTest -->
+    </test> <!-- TestRunner-Edge -->
+  </suite> <!-- Suite -->
 </testng-results>

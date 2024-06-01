@@ -1,19 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite thread-count="2" parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="com.comcast.crm.generic.listenerutility.ListImpClass"/>
+  </listeners>
+  <test thread-count="2" parallel="tests" name="TestRunner-Edge(failed)">
+    <parameter name="Browser" value="edge"/>
     <classes>
-      <class name="com.comcast.crm.contacttest.SampleTest">
+      <class name="com.finsBury.SCM.System.System_ManufacturerTest">
         <methods>
+          <include name="manufacturerTest"/>
           <include name="configBM"/>
           <include name="configAM"/>
           <include name="configBS"/>
           <include name="configBC"/>
-          <include name="createConTactTest"/>
           <include name="configAS"/>
           <include name="configAC"/>
         </methods>
-      </class> <!-- com.comcast.crm.contacttest.SampleTest -->
+      </class> <!-- com.finsBury.SCM.System.System_ManufacturerTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- TestRunner-Edge(failed) -->
+  <test thread-count="2" parallel="tests" name="TestRunner-Chrome(failed)">
+    <parameter name="Browser" value="chrome"/>
+    <classes>
+      <class name="com.finsBury.SCM.System.AddAndDeleteUnitTest">
+        <methods>
+          <include name="addAndDeleteUnit"/>
+          <include name="configBM"/>
+          <include name="configAM"/>
+          <include name="configBS"/>
+          <include name="configBC"/>
+          <include name="configAS"/>
+          <include name="configAC"/>
+        </methods>
+      </class> <!-- com.finsBury.SCM.System.AddAndDeleteUnitTest -->
+    </classes>
+  </test> <!-- TestRunner-Chrome(failed) -->
+</suite> <!-- Failed suite [Suite] -->

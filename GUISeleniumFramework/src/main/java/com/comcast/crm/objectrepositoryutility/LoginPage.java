@@ -8,6 +8,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.comcast.crm.generic.basetest.BaseClass;
+import com.comcast.crm.generic.fileutility.ExcelUtility;
+import com.comcast.crm.generic.fileutility.FileUtility;
 import com.comcast.crm.generic.webdriverutility.WebDriverUtility;
 
 /**
@@ -17,8 +19,12 @@ import com.comcast.crm.generic.webdriverutility.WebDriverUtility;
  * Contains Login page elements & business lib like login()
  *
  */  
-public class LoginPage extends BaseClass{                              // Rule-1  create a separte java class
-                           
+public class LoginPage {                              // Rule-1  create a separte java class
+             
+	public  FileUtility fLib = new FileUtility();
+	public ExcelUtility eLib = new ExcelUtility();
+	public WebDriverUtility wLib = new WebDriverUtility();
+	
 	WebDriver driver;
 	 public LoginPage(WebDriver driver) {             //Rule 3 : Object Initialization
 		 this.driver = driver;
@@ -63,10 +69,10 @@ public class LoginPage extends BaseClass{                              // Rule-1
 	 public void loginToapp() throws Throwable {
 		 wLib.waitForPageToLoad(driver);
 		 String URL = fLib.getDataFromPropertiesFile("url") ;
-		 String USERNAME = fLib.getDataFromPropertiesFile("username");
-		 String PASSWORD = fLib.getDataFromPropertiesFile("password");
 		 driver.get(URL);
 		 driver.manage().window().maximize();
+		 String USERNAME = fLib.getDataFromPropertiesFile("username");
+		 String PASSWORD = fLib.getDataFromPropertiesFile("password");
 		 usernameEdt.sendKeys(USERNAME);
 		 passwordEdt.sendKeys(PASSWORD);
 		 String txt = eLib.getDataFromExcel("Sheet1", 0, 3);
@@ -77,10 +83,10 @@ public class LoginPage extends BaseClass{                              // Rule-1
 	 public void loginToappManu() throws Throwable {
 		 wLib.waitForPageToLoad(driver);
 		 String URL = fLib.getDataFromPropertiesFile("url") ;
+		 driver.get(URL);
+		 driver.manage().window().maximize();
 		 String USERNAME = fLib.getDataFromPropertiesFile("usermanuf");
 		 String PASSWORD = fLib.getDataFromPropertiesFile("passwordmanuf");
-		 driver.get(URL);	
-		 driver.manage().window().maximize();
 		 usernameEdt.sendKeys(USERNAME);
 		 passwordEdt.sendKeys(PASSWORD);
 		 String txt = eLib.getDataFromExcel("Sheet1", 0, 2);
@@ -91,10 +97,10 @@ public class LoginPage extends BaseClass{                              // Rule-1
 	 public void loginToappRet() throws Throwable {
 		 wLib.waitForPageToLoad(driver);
 		 String URL = fLib.getDataFromPropertiesFile("url") ;
+		 driver.get(URL);
+		 driver.manage().window().maximize();
 		 String USERNAME = fLib.getDataFromPropertiesFile("userretailer");
 		 String PASSWORD = fLib.getDataFromPropertiesFile("passwordretailer");
-		 driver.get(URL);	
-		 driver.manage().window().maximize();
 		 usernameEdt.sendKeys(USERNAME);
 		 passwordEdt.sendKeys(PASSWORD);
 		 String txt = eLib.getDataFromExcel("Sheet1", 0, 1);

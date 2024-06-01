@@ -5,55 +5,38 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-	public class AddProductPage {
+import com.comcast.crm.generic.fileutility.ExcelUtility;
+import com.comcast.crm.generic.webdriverutility.JavaUtility;
+import com.comcast.crm.generic.webdriverutility.WebDriverUtility;
 
+public class AddProductPage {
+
+	  WebDriver driver ;
 		public AddProductPage(WebDriver driver) 
-
-		{
-
-			PageFactory.initElements(driver, this);
-
-		}
+        {
+			this.driver=driver;
+          PageFactory.initElements(driver, this);
+       }
 
 	@FindBy(name = "txtProductName")
-
-	private WebElement productEdt;
-
+    private WebElement productEdt;
 
     @FindBy(name = "txtProductPrice")
     private WebElement priceEdt;
 
-    //unit dopdown 
    @FindBy(name = "cmbProductUnit")
    private WebElement UnitDD;
 
-
-
-	//category dopdown 
-
 	@FindBy(name = "cmbProductCategory")
-
 	private WebElement CategDD;
 
-
-
-
-
 	public WebElement getProductEdt() {
-
-		return productEdt;
+      return productEdt;
 
 	}
 
-
-
-
-
-
-
 	public WebElement getPriceEdt() {
-
-		return priceEdt;
+      return priceEdt;
 
 	}
 
@@ -61,73 +44,43 @@ import org.openqa.selenium.support.PageFactory;
 		return UnitDD;
 
 	}
- public WebElement getCategDD() {
-
-		return CategDD;
+    
+	public WebElement getCategDD() {
+      return CategDD;
 
 	}
-
-
-
 	public WebElement getEnableRbtn() {
-
-		return EnableRbtn;
+     return EnableRbtn;
 
 	}
-
-
 
 	public WebElement getDisableRbtn() {
-
-		return DisableRbtn;
+     return DisableRbtn;
 
 	}
-
-
 
 	public WebElement getDescriptn() {
-
-		return Descriptn;
-
+     return Descriptn;
 	}
-
-
-
+	
 	public WebElement getAddpbtn() {
-
-		return Addpbtn;
+      return Addpbtn;
 
 	}
-
-	//radio button 
 
 	@FindBy(xpath = "//input[@value='1']")
-
-	private WebElement EnableRbtn;
-
-
-
-	//radio button 
+     private WebElement EnableRbtn;
 
 	@FindBy(xpath = "//input[@value='2']")
-
-	private WebElement DisableRbtn;
-
-
+    private WebElement DisableRbtn;
 
 	@FindBy(xpath = "//textarea[@placeholder='Description']")
-
-	private WebElement Descriptn;
-
-
+    private WebElement Descriptn;
 
 	@FindBy(xpath = "//input[@type='submit']")
+    private WebElement Addpbtn;
 
-	private WebElement Addpbtn;
-
-
-
-	}
+}
 
 	
 
