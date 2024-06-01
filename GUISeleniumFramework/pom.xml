@@ -20,7 +20,7 @@
 						<configuration>
 							<suiteXmlFiles>
 								<!-- TestNG suite XML files -->
-								<suiteXmlFile>suite_fullRegressionTest.xml</suiteXmlFile>
+								<suiteXmlFile>full_RegressionTesting.xml</suiteXmlFile>
 							</suiteXmlFiles>
 						</configuration>
 					</plugin>
@@ -38,7 +38,7 @@
 						<configuration>
 							<suiteXmlFiles>
 								<!-- TestNG suite XML files -->
-								<suiteXmlFile>suite_smokeTest.xml</suiteXmlFile>
+								<suiteXmlFile>Suite_smokeTesting.xml</suiteXmlFile>
 							</suiteXmlFiles>
 						</configuration>
 					</plugin>
@@ -46,7 +46,7 @@
 			</build>              
           </profile> 
            <profile>
-               <id>RRT</id>
+               <id>RT</id>
                 <build>
 				<plugins>
 					<plugin>
@@ -56,7 +56,7 @@
 						<configuration>
 							<suiteXmlFiles>
 								<!-- TestNG suite XML files -->
-								<suiteXmlFile>suite_regionalRegressionTest.xml</suiteXmlFile>
+								<suiteXmlFile>Suite_regressionTest.xml</suiteXmlFile>
 							</suiteXmlFiles>
 						</configuration>
 					</plugin>
